@@ -1,0 +1,332 @@
+@import variable
+@import mixin
+
+*,
+*::before,
+*::after
+  margin: 0
+  padding: 0
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+img
+  vertical-align: middle
+.header
+  background-color: $color-fff
+  font-family: 'OpenSans', sans-serif
+  font-size: 16px
+  height: 135px
+  .navbar
+    align-items: flex-end
+    padding-left: 0
+    padding-right: 0
+    .navbar-nav
+      padding-bottom: 5px
+    .nav-item
+      position: relative
+      .nav-link
+        padding: 0 15px
+        line-height: 75px
+        color: $nav-link
+        position: relative
+      &::before
+        content: ''
+        display: block
+        width: 100%
+        height: 3px
+        position: absolute
+        bottom: 0
+        background-color: rgba($main-color, 0)
+      &.active
+        &::before
+          background-color: rgba($main-color, 1)
+
+.banner
+  margin-top: 135px
+  .swiper-slide
+    background-size: cover!important
+    background-position: center!important
+    height: 640px
+    @media (max-width: 1366px)
+      height: 500px
+    .container,
+    .row
+      height: 100%
+  &-form
+    &_description
+      font-size: 24px
+      text-transform: uppercase
+      margin-bottom: 0
+      font-family: 'OpenSans', sans-serif
+    &_slogan
+      color: $button-color
+      font-size: 39px
+      line-height: 60px
+      text-transform: uppercase
+      font-family: 'UTM Times', sans-serif
+    &_sapo
+      font-size: 22px
+      text-transform: uppercase
+      margin-bottom: 0
+      font-family: 'OpenSans', sans-serif
+      margin-top: 10px
+    form
+      margin-top: 10px
+    &_input
+      line-height: 42px
+      height: 42px
+      -webkit-border-radius: 21px
+      -moz-border-radius: 21px
+      border-radius: 21px
+      border: solid 1px $color-b7
+      -webkit-box-shadow: 0 20px 40px rgba(#a8adbb, .6)
+      -moz-box-shadow: 0 20px 40px rgba(#a8adbb, .6)
+      box-shadow: 0 20px 40px rgba(#a8adbb, .6)
+      &::placeholder
+        text-transform: uppercase
+    &_submit
+      line-height: 42px
+      height: 42px
+      -webkit-border-radius: 21px
+      -moz-border-radius: 21px
+      border-radius: 21px
+      background-color: $button-color
+      border: none
+      color: $color-fff
+      text-transform: uppercase
+      -webkit-box-shadow: 0 20px 40px rgba(#a8adbb, .6)
+      -moz-box-shadow: 0 20px 40px rgba(#a8adbb, .6)
+      box-shadow: 0 20px 40px rgba(#a8adbb, .6)
+
+.secret
+  padding: 60px 0 40px
+  text-align: center
+  font-family: 'OpenSans', sans-serif
+  *
+    margin: 0 auto
+  &-heading
+    font-family: 'UTM Times', sans-serif
+    font-size: 34px
+    color: $button-color
+    margin-bottom: 40px
+    text-transform: uppercase
+  &-description
+    font-size: 16px
+    line-height: 24px
+    color: $color-24
+    margin-bottom: 70px
+  &-thumb
+    width: 50%
+  &-title
+    font-size: 24px
+    margin-top: 20px
+    margin-bottom: 25px
+    text-transform: uppercase
+  &-sapo
+    font-size: 16px
+    line-height: 24px
+    padding: 0 15px
+    margin-bottom: 20px
+
+.service
+  padding-top: 70px
+  padding-bottom: 75px
+  background: url('../images/service-bg.jpg') no-repeat center
+  background-size: cover
+  font-family: 'OpenSans', sans-serif
+  &-heading
+    font-family: 'UTM Times', sans-serif
+    margin: 0 auto 25px
+    font-size: 34px
+    text-transform: uppercase
+    text-align: center
+  &-description
+    font-size: 16px
+    line-height: 24px
+    margin: 0 auto 35px
+    text-align: center
+  &-item
+    background-color: $color-fff
+  .col-md-5
+    padding-left: 70px
+  &-title
+    font-family: 'UTM Times', sans-serif
+    font-size: 24px
+    text-transform: uppercase
+  &-sapo
+    font-size: 16px
+    line-height: 24px
+  &-img
+    width: 100%
+
+.process
+  padding-top: 60px
+  padding-bottom: 10px
+  &-heading
+    font-family: 'UTM Times', sans-serif
+    font-size: 34px
+    text-transform: uppercase
+    margin-bottom: 60px
+  &-item
+    text-align: center
+    font-family: 'UTM Times', sans-serif
+    text-transform: uppercase
+    margin-bottom: 20px
+    &:nth-child(3)
+      .process-icon
+        &:after
+          display: none
+  &-step
+    font-size: 28px
+    margin-bottom: 30px
+    margin-top: 10px
+  &-title
+    font-size: 20px
+    margin-top: 20px
+  &-icon
+    position: relative
+    &:after
+      content: ''
+      display: block
+      width: 90%
+      height: 1px
+      background-color: $button-color
+      position: absolute
+      top: 50%
+      right: 0
+      -webkit-transform: translate(55%, -50%)
+      -moz-transform: translate(55%, -50%)
+      -ms-transform: translate(55%, -50%)
+      -o-transform: translate(55%, -50%)
+      transform: translate(55%, -50%)
+
+.technical
+  padding-top: 60px
+  padding-bottom: 40px
+  background: url('../images/technical.jpg') no-repeat center
+  background-size: cover
+  &-heading
+    font-family: 'UTM Times', sans-serif
+    font-size: 34px
+    text-transform: uppercase
+    margin-bottom: 50px
+    span
+      font-size: 50px
+      display: block
+  &-description
+    font-family: 'OpenSans', sans-serif
+    font-size: 16px
+    line-height: 24px
+  &-img
+    width: 100%
+  &-title
+    font-family: 'UTM Times', sans-serif
+    font-size: 24px
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 20px
+  &-sapo
+    font-family: 'OpenSans', sans-serif
+    font-size: 16px
+    line-height: 24px
+    margin: 20px auto 0
+    text-align: center
+    padding: 0 30px
+
+.reason
+  font-family: 'UTM Times', sans-serif
+  padding-top: 60px
+  padding-bottom: 150px
+  &-heading
+    font-size: 34px
+    color: $button-color
+    text-transform: uppercase
+    margin: 0 auto 25px
+  &-description
+    font-size: 16px
+    line-height: 24px
+    text-align: center
+  &-item
+    .table
+      height: 60%
+  &-img
+    img
+      width: 100%
+  &-title
+    font-size: 24px
+    text-transform: uppercase
+    text-align: center
+  &-sapo
+    font-size: 16px
+    line-height: 24px
+    text-align: center
+
+.contact
+  &-left
+    background-color: #737373
+    padding-top: 100px
+    padding-bottom: 35px
+    padding-left: 60px
+    padding-right: 60px
+  &-heading
+    font-family: 'UTM Times', sans-serif
+    font-size: 34px
+    text-transform: uppercase
+    color: $button-color
+    text-align: center
+    margin-bottom: 35px
+    span
+      font-size: 30px
+      display: block
+  &-description
+    font-family: 'OpenSans', sans-serif
+    font-size: 24px
+    text-transform: uppercase
+    color: $color-fff
+    text-align: center
+    margin-bottom: 45px
+  &-input
+    height: 50px
+    line-height: 50px
+    width: 100%
+    display: block
+    margin-bottom: 10px
+    text-align: center
+  &-submit
+    background-color: $button-color
+    text-align: center
+    margin: 20px auto 0
+    font-family: 'OpenSans', sans-serif
+    text-transform: uppercase
+    font-size: 16px
+    display: block
+    border: none
+    height: 42px
+    line-height: 42px
+    color: $color-fff
+    border-radius: 21px
+    padding: 0 20px
+  &-img
+    width: 100%
+
+.footer
+  background-color: #222328
+  padding-top: 40px
+  &-top
+    width: 100%
+    color: $color-fff
+    text-transform: uppercase
+    font-family: 'OpenSans', sans-serif
+    padding-bottom: 25px
+    border-bottom: solid 1px #656569
+  &-icon
+    margin-top: -2px
+    display: inline-block
+  &-item
+    margin-bottom: 10px
+  &-bottom
+    width: 100%
+    color: #77777e
+    line-height: 70px
+  &-credit
+    margin-bottom: 0
