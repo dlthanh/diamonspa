@@ -1,7 +1,23 @@
 $(function() {
     var banner = new Swiper('.banner', {
         speed: 600,
-        slidesPerView: 1
+        slidesPerView: 1,
+        pagination: {
+            el: '.banner-pagination'
+        },
+    });
+    banner.on('slideChange', function() {
+        new WOW().init();
+    });
+
+    new WOW().init();
+
+    var service = new Swiper('.service-slider', {
+        speed: 600,
+        slidesPerView: 1,
+        pagination: {
+            el: '.service-pagination'
+        },
     });
 
     var url = 'https://docs.google.com/forms/d/e/1FAIpQLSdqQGaMUrezKDsUE5sriMy9YrKhUtKAtiiIDIoqVCeHeG-EGw/formResponse';
