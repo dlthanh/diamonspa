@@ -5,6 +5,11 @@ $(function() {
         pagination: {
             el: '.banner-pagination'
         },
+        navigation: {
+            nextEl: '.banner-next',
+            prevEl: '.banner-prev',
+        }
+
     });
     banner.on('slideChange', function() {
         new WOW().init();
@@ -18,6 +23,10 @@ $(function() {
         pagination: {
             el: '.service-pagination'
         },
+        navigation: {
+            nextEl: '.service-next',
+            prevEl: '.service-prev',
+    }
     });
 
     var url = 'https://docs.google.com/forms/d/e/1FAIpQLSdqQGaMUrezKDsUE5sriMy9YrKhUtKAtiiIDIoqVCeHeG-EGw/formResponse';
@@ -54,4 +63,11 @@ $(function() {
             }
         })
     });
+
+    $('.banner-link').click(function(e) {
+        e.preventDefault();
+        var link = $(this).attr('href'),
+            offsettop = $(link).offset().top - 135;
+        $('html, body').animate({scrollTop: offsettop}, 600, 'swing');
+    })
 });
