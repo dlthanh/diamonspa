@@ -26,8 +26,18 @@ $(function() {
         navigation: {
             nextEl: '.service-next',
             prevEl: '.service-prev',
-    }
+		}
     });
+	
+	var technical = new Swiper('.technical-slider', {
+		speed: 600,
+        slidesPerView: 'auto',
+		spaceBetween: 30,
+		autoplay: true,
+		pagination: {
+            el: '.technical-pagination'
+        }
+	})
 
     var url = 'https://docs.google.com/forms/d/e/1FAIpQLSdqQGaMUrezKDsUE5sriMy9YrKhUtKAtiiIDIoqVCeHeG-EGw/formResponse';
     url = btoa(url);

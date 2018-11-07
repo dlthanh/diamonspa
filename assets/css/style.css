@@ -300,6 +300,24 @@ img {
     margin: 20px auto 0;
     text-align: center;
     padding: 0 30px; }
+  .technical-slider {
+    padding-bottom: 20px }
+    .technical-slider .swiper-slide {
+	width: 100%!important }
+  .technical-pagination {
+    position: relative;
+    width: auto !important;
+    z-index: 1003;
+    bottom: 0 !important;
+    text-align: center; }
+    .technical-pagination .swiper-pagination-bullet {
+      background-color: #fff;
+      width: 50px;
+      height: 6px;
+      border-radius: 2px;
+      opacity: 1; }
+      .technical-pagination .swiper-pagination-bullet-active {
+        background-color: #6a6565; }
 
 .reason {
   font-family: "UTM Times", sans-serif;
